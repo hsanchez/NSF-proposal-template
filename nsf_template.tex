@@ -1,0 +1,78 @@
+% Template info for NSF Proposal
+\documentclass[11pt]{article}
+
+\usepackage[letterpaper,left=1in,right=1in,top=1in,bottom=1in]{geometry}
+\usepackage{subfigure}
+\usepackage{acronym}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{cases}
+\usepackage{comment}
+\usepackage{epsfig}
+
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+
+\usepackage{fancyhdr} % put information into footer
+\fancypagestyle{plain}{%
+ \fancyhf{} % clear all header and footer fields
+% \fancyfoot[C]{\newline Use or disclosure of data contained on this sheet is subject to the restrictions on the cover page of this proposal}
+ \renewcommand{\headrulewidth}{0.0pt}
+ \renewcommand{\footrulewidth}{0.4pt}}
+\pagestyle{plain}
+
+\usepackage{titling}
+\usepackage[inline]{enumitem}
+
+\usepackage{color}
+\usepackage{soul}
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+\definecolor{lred}{RGB}{255, 153, 153}
+\definecolor{lpurp}{RGB}{204, 204, 255}
+\definecolor{lorange}{RGB}{255, 204, 102}
+\definecolor{dorange}{RGB}{255, 204, 153}
+
+\newcommand{\unsure}[2]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red]{#1}\sethlcolor{lred} \texthl{#2}}
+\newcommand{\change}[2]{\todo[linecolor=lpurp,backgroundcolor=lpurp,bordercolor=lpurp]{#1}\sethlcolor{lpurp} \texthl{#2}}
+\newcommand{\info}[2]{\todo[linecolor=dorange,backgroundcolor=dorange,bordercolor=dorange]{#1}\sethlcolor{dorange}\texthl{#2}}
+\newcommand{\improvement}[2]{\todo[linecolor=blue!20!white,backgroundcolor=cyan,bordercolor=blue!20!white]{#1}\sethlcolor{cyan} \texthl{#2}}
+\newcommand{\thiswillnotshow}[2]{\todo[disable]{#1}#2}
+\newcommand{\explainindetail}[2]{\todo[color=green!40]{#1}\sethlcolor{green}\texthl{#2}}
+
+%% Contributors
+\newcommand{\Constantine}{{\bfseries JohnC: }}
+
+%% date
+\usepackage{datetime2}
+
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pdfpages}
+\usepackage{url}
+\usepackage{wrapfig}
+\usepackage{setspace}
+ \let\oldthebibliography=\thebibliography
+ \let\endoldthebibliography=\endthebibliography
+  \renewenvironment{thebibliography}[1]{
+   \begin{oldthebibliography}{#1}
+      \setlength{\parskip}{0ex}
+      \setlength{\itemsep}{0ex}
+  }
+  {
+    \end{oldthebibliography}
+  }
+\bibliographystyle{plain}
+
+% - - - - - Specialized Markup  - - - - -
+% Omit This: Comment out large sections of text
+% Usage: \omitthis{commented text}
+\long\def\omitthis#1{\relax}
+%
+% - - ToDo: Clear markup in paper margin
+% % Usage: \todo{``your comment''}
+% \newcommand{\todo}[1]{ {\mbox{}\marginpar[\hfill$\bigodot$]{$\bigodot$\hfill} {\sc#1}}}
